@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+<canvas width="600" height="400"></canvas> <!--tag para podermos desenhar no mundo html-->
+
+<script>
+
+    var tela = document.querySelector("canvas");
+    var pincel = tela.getContext("2d"); //esse comando está selecionando o tipo de pincel que iremos utilizar
+
+    pincel.fillStyle = "lightgrey"; //'fillStyle' é um atributo, então ele recebe um valor (como uma variavel) e deve vir antes para o programa enteder como voce quer fazer o comando
+    pincel.fillRect(0, 0, 600, 400); //comando pedindo ao pincel que preencha o retangulo (que deve ter as coordenadas iniciais e a quantidade em pixel que vai andar com o pincel)
+    
+    function desenhaBolinha(evento) {
+        
+        var x = evento.pageX - tela.offsetLeft; //o browser conta com o tamanho da tela, não só nosso canvas, por isso o comando 'offset', para ignorar o tamanho da tela que nao esta no canvas
+        var y = evento.pageY - tela.offsetTop; //o comando 'evento.page' nos passa o que o browser le da coordenada de onde foi o click 
+        pincel.fillStyle = "blue";
+        pincel.beginPath();
+        var bolona = evento.shiftKey;
+        
+        if(bolona == true){
+
+            pincel.arc(x, y, 25, 0, 2 * 3.14);
+            pincel.fill();
+        }else{
+            pincel.arc(x, y, 5, 0, 2 * 3.14);
+            pincel.fill();
+        }
+        
+        alert(x + " , " + y);
+        
+    }
+
+    tela.onclick = desenhaBolinha; //comando funciona igual ao comando do botao
+
+</script>

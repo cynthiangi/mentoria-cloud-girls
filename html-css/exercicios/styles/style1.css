@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #e9cadd;
+}
+
+.titulo-blog {
+    color: #3f3fb6;
+    margin-top: 20px;
+    margin-left: 120px;
+    border: 1px solid #7676e6;
+    border-radius: 16px;
+    padding: 10px;
+}
+
+.noticias{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 300px;
+}
+p {
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.texto-destaque {
+    color: #9393ff;
+}
+
+.urgente {
+    color: #ff0000;
+}
+

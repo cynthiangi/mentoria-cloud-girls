@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var numeroPensado = Math.round(Math.random() * 10); //'Math.random' gera um numero aleatorio de 0 a 1. Mutiplica-se por 10 pois nosso programa é para 0 a 10
+    console.log(numeroPensado);// 'console.log' nos dá a resposta do que está sendo visto no parametro colocado nele (como um teste dentro do console)
+
+    var chute = parseInt(prompt("Chute um número de 0 a 10:"));
+
+    if (chute == numeroPensado){
+
+        mostra("PARABÉNS! Você acertou!");
+
+    } else{ //a condição 'if' retorna o verdadeiro e o else retorna o falso
+
+    //if (chute != numeroPensado)
+
+        mostra("Que pena! Não foi dessa vez! O número pensado foi:<br>" + numeroPensado);
+
+    }
+
+</script>

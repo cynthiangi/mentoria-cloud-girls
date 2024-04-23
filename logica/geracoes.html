@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+
+    }
+
+    function mostra(texto) {
+
+        document.write(texto);
+        pulaLinha();
+
+    }
+
+    var anoColonização = 1500;
+    var anoAtual = 2024;
+    var idadeBrasil = anoAtual - anoColonização;
+    var gerações = idadeBrasil/28;
+
+    mostra("O brasil foi descoberto há " + idadeBrasil);
+    mostra("A quantidade de gerações que já passaram no Brasil é " + Math.round(gerações));
+
+</script>

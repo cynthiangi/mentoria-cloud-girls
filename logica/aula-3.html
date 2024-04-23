@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<script>
+    var ano = 2016; //declarando variaveis, onde podemos alterar apenas uma vez uma variavel que aparece em varios lugares
+    //le-se: variavel ano recebe 2016
+   
+    document.write("Flávio tem " + (ano - 1977) + " anos" + "<br>");
+    document.write("Joaquim tem " + (ano - 1996) + " anos" + "<br>") ;
+
+    ano = 2017; //declara-se 'var ano = 2016' quando for a primeira vez, caso reatribua o valor da variavel 'ano', se declara 'ano = 2017'
+    document.write("Marcelo tem " + (ano - 1976) + " anos" + "<br>") ;
+
+    var idadeFlavio = 39; //varivel deve ser declarada com a primeira letra MINUSCULA, se tiver duas palavras, a segunda deve ser declada com a primeira letra MAIUSCULA.
+    var idadeJoaquim = 20;
+    var idadeMarcelo = 41;
+    //variaveis servem para facilitar o entendimento do código para quem está lendo.
+    var media = (idadeFlavio + idadeJoaquim + idadeMarcelo)/3; //cada vez que declarar uma nova variavel, deve-se declarar completa
+    document.write("A média das idades é " + Math.round(media)); //caso queiramos um valor exato, utiliza-se o comando Math.round, que irá arredondar o valor calculado
+
+    var nome = "Flávio";
+    document.write("<br>" + "A idade de " + nome + " é " + idadeFlavio);
+</script>

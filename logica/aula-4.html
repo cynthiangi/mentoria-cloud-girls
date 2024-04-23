@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+<script>
+    function mostra(texto) {
+
+        document.write(texto);
+        pulaLinha();
+
+    } //quando precisamos que a função receba um parametro, temos que colocar um nome tanto na função criada quanto no comando-instrução
+    //o nome dado, age como uma variavel, substituindo sempre pelo que desejamos que apareça
+    //podemos colocar uma função dentro de outra função
+    
+    function pulaLinha() {
+
+        document.write("<br><br><br>")
+
+    } //a variavel pode tambem ser um comando JavaScript, dessa forma, se declara 'function', onde tudo o que a função criada faz, está dentro desse novo comando (nas chaves)
+    //toda 'function' criada deve ser um verbo, pois determina uma ação
+    //a função tambem facilita a leitura do codigo, por isso de nomes que signifiquem algo
+    
+    var ano = 2016; //declarando variaveis, onde podemos alterar apenas uma vez uma variavel que aparece em varios lugares
+    //le-se: variavel ano recebe 2016
+    //var pulaLinha = "<br><br><br>"; como o <br> serve para pular linha, caso queiramos pular mais de uma, seria interessante criar uma variavel para alterar em todos de forma mais rapida
+   
+    mostra("Flávio tem " + (ano - 1977) + " anos");
+    
+    
+    mostra("Joaquim tem " + (ano - 1996) + " anos");
+    
+
+    ano = 2017; //declara-se 'var ano = 2016' quando for a primeira vez, caso reatribua o valor da variavel 'ano', se declara 'ano = 2017'
+    
+    mostra("Marcelo tem " + (ano - 1976) + " anos");
+
+    
+</script>
+

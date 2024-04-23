@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+
+<canvas width="600" height="400"></canvas> 
+
+<script>
+
+    var tela = document.querySelector("canvas");
+    var pincel = tela.getContext("2d"); 
+
+    pincel.fillStyle = "lightgrey"; 
+    pincel.fillRect(0, 0, 600, 400);
+
+    function desenhaCirculo (x, y, raio) {
+
+        pincel.fillStyle = "blue";
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI); //'Math.PI' define o valor de 3.14
+        pincel.fill();
+
+    }
+
+    function limpaTela(){
+
+        pincel.clearRect(0, 0, 600, 400);
+    }
+
+    var x = 20; // a variavel de posição inicial deve ser colocada fora da função para a bolinha andar
+    var sentido = 1;
+
+    function atualizaTela(){
+        
+        limpaTela();
+        if(x > 600){
+            sentido = -1;
+        }else if(x < 0){
+            sentido = 1;
+        } 
+        desenhaCirculo(x, 20, 10);
+        x = x + sentido;
+    
+    }
+    
+    setInterval(atualizaTela, 10); // 'setInterval' é um comando que funciona com tempo, determinado dentro da função que ele usa como parametro
+
+</script>

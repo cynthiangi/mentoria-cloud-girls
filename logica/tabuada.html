@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<script>
+   
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var numero = parseInt(prompt("Insira um número de 1 a 10."));
+    
+    for (var multiplicador = 1; multiplicador <= 10; multiplicador++) { //o incremento '++' significa 'variavel + 1', de forma simplificada
+
+        mostra(numero*multiplicador);
+
+    } // 'for' funciona como 'while' mas colocamos a variavel, a condição e o incrimento dentro do parametro dele de analise (ele é mais inteligente)
+
+    pulaLinha();
+    mostra("FIM.")
+</script>

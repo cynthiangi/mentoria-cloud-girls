@@ -1,0 +1,66 @@
+<meta charset="UTF-8">
+
+<!-- 
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+
+    }
+
+    function mostra(texto) {
+
+        document.write(texto);
+        pulaLinha();
+
+    }
+
+    function calculaImc(peso, altura) {
+
+        var imc = peso / (altura * altura);
+        mostra("O IMC calculado é " + Math.round(imc));
+        //aqui puxamos uma função em outra, após usar uma funçao para calcular IMC, dessa forma iremos mostrar o resultado e podemos puxar a função mais de uma vez
+    }
+
+    var pesoCynthia = 76;
+    var alturaCynthia = 1.59;
+
+    mostra("Cynthia pesa " + pesoCynthia);
+    mostra("Cynthia mede " + alturaCynthia);
+    calculaImc (76, 1.59);
+
+</script>  -->
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+
+    }
+
+    function mostra(texto) {
+
+        document.write(texto);
+        pulaLinha();
+
+    }
+
+    function calculaImc(peso, altura) {
+
+        var imc = peso / (altura * altura);
+        return imc; //para retornar o valor para dentro do nosso programa, utilizamos o comando 'return', onde ele entrega para o programa o valor calculado dentro da funçaõ
+        // o que estiver descrito no return para devolver como valor da função, será o que aparecer, ***cuidado***!
+        // a formula tambem pode estar no 'return', dessa forma o programa avalia o calculo em si e ja retorna o valor final
+    }
+    // utilizando o 'return', deixamos livre para o programa imprimir o resultado da forma que quiser, diferente da forma com a função 'mostra' dentro da função 'calculaImc'
+    var nome = prompt("Informe seu nome:")
+    var alturaInformada = prompt(nome + ", informe sua altura:"); //o comando 'prompt' interage com o usuario, transformando o programa de forma generica, nao necessitando utilizar do código para calcular
+    var pesoInformado = prompt(nome + ", informe o seu peso:");
+
+    var imc = calculaImc(pesoInformado, alturaInformada);
+
+    mostra(nome + ", o seu IMC é " + imc);
+
+</script>  
