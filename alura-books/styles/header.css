@@ -1,0 +1,63 @@
+.cabecalho__menu-hamburguer{
+    width: 24px;
+    height: 24px;
+    background-image: url("../imagens/Menu.svg");
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.cabecalho{
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.container__botao{
+    display: none;
+}
+
+.container__imagem{
+    padding: 1em;
+}
+
+.lista-menu{
+    display: none;
+    /* posição do elemento-filho atua de acordo com a posição do elemento-pai */
+    position: absolute;
+    /* colocando o cabeçalho todo para cima da lista */
+    top: 100%; 
+    width: 65vw;
+}
+
+/* quando precisamos usar duas classes combinadas, utilizamos o ~ como elemento de combinação
+    lendo em portugues: quando o botao estiver selecionado, essa sera a configuração para a classe */
+.container__botao:checked~.lista-menu{
+    display: block;
+}
+
+.lista-menu__titulo, .lista-menu__item{
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.lista-menu__titulo{
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.lista-menu__link{
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase; /* transforma todo o texto com essa classe em caixa alta */
+}
